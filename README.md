@@ -15,8 +15,28 @@ The script depends upon the following files to be present in the directory from 
 The tidy dataset consists of all the mean and std-dev values for each of the activity for each subject, i.e. one subject per row per activity. The mean and std-dev values are extracted from ALL the columns in the train and test sets which have either the word mean() or std in their column names. The grepl function is uesed to generate those column names.
 The activities are re-coded from the original set according to the file activity-lables.txt
 i.e.
-
 "SubjectId" "ActivityName" "observation1-mean" "observation1-std" "observation2-mean"...
 
 Please refer to CodeBook.md for details on the obseravation column names
+
+The following steps are taken to generate the tidy dataset
+a. Read the test dataset into a data table
+
+b. Read the train dataset into a data table
+
+d. Add the Subject Ids for both the training and test sets and append to the dataset using cbind
+
+e. Read the Activity Ids for both the sets and append to the dataset using cbind
+
+f. Combine the two sets into one set using rbind
+
+g. Convert the activity codes to activity descriptions e.g. 1=WALKING, 2=WALKING_UPSTAIRS, etc.
+
+h. Extract out all the columns that have the word "mean" or "std" in them and store in a new data frame
+
+i. for each subject AND each activity, select a subset of the data
+
+j. Compute the mean of these subsets and append to a new dataframe using rbind
+
+k. Print out the tidy dataset to a file
 
