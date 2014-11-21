@@ -19,24 +19,26 @@ i.e.
 
 Please refer to CodeBook.md for details on the obseravation column names
 
-The following steps are taken to generate the tidy dataset
+The following steps are taken to generate the tidy dataset:
+
+
 a. Read the test dataset into a data table
 
-b. Read the train dataset into a data table
+b. Read the training dataset into a data table
 
-d. Add the Subject Ids for both the training and test sets and append to the dataset using cbind
+c. Add the Subject Ids for both the training and test sets and append to the dataset using cbind
 
-e. Read the Activity Ids for both the sets and append to the dataset using cbind
+d. Read the Activity Ids for both the sets and append to the dataset using cbind
 
-f. Combine the two sets into one set using rbind
+e. Combine the two sets into one set using rbind
 
-g. Convert the activity codes to activity descriptions e.g. 1=WALKING, 2=WALKING_UPSTAIRS, etc.
+f. Convert the activity codes to activity descriptions e.g. 1=WALKING, 2=WALKING_UPSTAIRS, etc.
 
-h. Extract out all the columns that have the word "mean" or "std" in them and store in a new data frame
+g. Extract out all the columns that have the word "mean" or "std" in them and store in a new data frame
 
-i. for each subject AND each activity, select a subset of the data
+h. for each subject AND each activity, select a subset of the data
 
-j. Compute the mean of these subsets and append to a new dataframe using rbind
+i. Compute the mean of these subsets and append to a new dataframe using rbind
 
-k. Print out the tidy dataset to a file
+j. Print out the tidy dataset to a file
 
