@@ -87,7 +87,7 @@ for ( i in 1:30 ) {
   }
 }
 # write out the tidy set
-write.table(tidySet, "TidySet.csv", row.names=FALSE)
+write.table(tidySet, "TidySet.txt", row.names=FALSE)
 
 
 
